@@ -21,13 +21,27 @@ class ChannelVC: UIViewController {
     }
     
     // Actions
+    override func viewDidAppear(_ animated: Bool) {
+        setUserInfo()
+    }
+    
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
     @objc func userDataDidChange(_ notif: Notification) {
+        setUserInfo()
+    }
+    
+    func setUserInfo() {
         if AuthService.instance.isLoggedIn {
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImg.image = UIImage(named: UserDataService.instance.avatarName)

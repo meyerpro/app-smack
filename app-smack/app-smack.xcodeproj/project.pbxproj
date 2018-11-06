@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60017002279CF91960AEE0CA /* Pods_app_smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7EFDE74D23C8AA9CF75EA9E /* Pods_app_smack.framework */; };
+		6520C3F02191349E00D50991 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520C3EF2191349E00D50991 /* MessageService.swift */; };
+		6520C3F2219134F600D50991 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6520C3F1219134F600D50991 /* Channel.swift */; };
 		6584A777218706A500E1D0F8 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584A776218706A500E1D0F8 /* ChatVC.swift */; };
 		6584A779218706B600E1D0F8 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584A778218706B600E1D0F8 /* ChannelVC.swift */; };
 		6584A77D21870A4200E1D0F8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6584A77B21870A4100E1D0F8 /* SWRevealViewController.m */; };
@@ -25,9 +27,13 @@
 		659B59B0218837E200166FA1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B59AF218837E200166FA1 /* Constants.swift */; };
 		659B59B221883C6500166FA1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B59B121883C6500166FA1 /* LoginVC.swift */; };
 		65F82870218EEA8E008CCC70 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F8286F218EEA8E008CCC70 /* CreateAccountVC.swift */; };
+		65FBF880218EF28A00111379 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FBF87E218EF28A00111379 /* ProfileVC.swift */; };
+		65FBF881218EF28A00111379 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FBF87F218EF28A00111379 /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6520C3EF2191349E00D50991 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		6520C3F1219134F600D50991 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		6584A776218706A500E1D0F8 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		6584A778218706B600E1D0F8 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		6584A77A21870A4100E1D0F8 /* app-smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "app-smack-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		659B59AF218837E200166FA1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		659B59B121883C6500166FA1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		65F8286F218EEA8E008CCC70 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		65FBF87E218EF28A00111379 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		65FBF87F218EF28A00111379 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		9C536089BABFAC454F31DBA3 /* Pods-app-smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-app-smack/Pods-app-smack.release.xcconfig"; sourceTree = "<group>"; };
 		B9F1B6EBEB008F62399F8E9A /* Pods-app-smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-app-smack/Pods-app-smack.debug.xcconfig"; sourceTree = "<group>"; };
 		D7EFDE74D23C8AA9CF75EA9E /* Pods_app_smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +95,7 @@
 		6584A7732187064800E1D0F8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6520C3F1219134F600D50991 /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -110,6 +119,7 @@
 				659B59B121883C6500166FA1 /* LoginVC.swift */,
 				659830EC218DB3CC005B0081 /* AvatarPickerVC.swift */,
 				65F8286F218EEA8E008CCC70 /* CreateAccountVC.swift */,
+				65FBF87E218EF28A00111379 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +129,7 @@
 			children = (
 				6585B69A218C55480026B4DF /* AuthService.swift */,
 				6585B69E218C6D990026B4DF /* UserDataService.swift */,
+				6520C3EF2191349E00D50991 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 		658C3D332186651100FC3C1D /* app-smack */ = {
 			isa = PBXGroup;
 			children = (
+				65FBF882218EF2BD00111379 /* XIBs */,
 				6585B699218C552E0026B4DF /* Services */,
 				659B59AE218837C700166FA1 /* Utilities */,
 				6584A7732187064800E1D0F8 /* Model */,
@@ -165,6 +177,14 @@
 				659B59AF218837E200166FA1 /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		65FBF882218EF2BD00111379 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				65FBF87F218EF28A00111379 /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		8EDB63E9B433F081C983D52F /* Pods */ = {
@@ -237,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FBF881218EF28A00111379 /* ProfileVC.xib in Resources */,
 				658C3D3F2186651300FC3C1D /* LaunchScreen.storyboard in Resources */,
 				658C3D3C2186651300FC3C1D /* Assets.xcassets in Resources */,
 				658C3D3A2186651100FC3C1D /* Main.storyboard in Resources */,
@@ -295,10 +316,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FBF880218EF28A00111379 /* ProfileVC.swift in Sources */,
 				6584A779218706B600E1D0F8 /* ChannelVC.swift in Sources */,
 				659830ED218DB3CD005B0081 /* AvatarPickerVC.swift in Sources */,
 				6585B69D218C60F00026B4DF /* RoundedButton.swift in Sources */,
+				6520C3F2219134F600D50991 /* Channel.swift in Sources */,
 				6584B9ED218E678A00408F88 /* CircleImage.swift in Sources */,
+				6520C3F02191349E00D50991 /* MessageService.swift in Sources */,
 				65F82870218EEA8E008CCC70 /* CreateAccountVC.swift in Sources */,
 				6584A777218706A500E1D0F8 /* ChatVC.swift in Sources */,
 				6585B69F218C6D990026B4DF /* UserDataService.swift in Sources */,
